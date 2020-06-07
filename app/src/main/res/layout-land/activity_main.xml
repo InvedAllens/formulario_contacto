@@ -11,10 +11,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarStyle="outsideInset"
-        android:visibility="visible"
-        tools:visibility="visible">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,56 +34,6 @@
                 android:visibility="visible"
                 tools:visibility="visible" />
 
-            <CalendarView
-                android:id="@+id/cvCalendario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:background="@android:color/holo_blue_bright"
-                android:dateTextAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:descendantFocusability="afterDescendants"
-                android:drawingCacheQuality="auto"
-                android:fadeScrollbars="true"
-                android:firstDayOfWeek="@android:integer/config_longAnimTime"
-                android:focusable="auto"
-                android:layoutMode="opticalBounds"
-                android:outlineAmbientShadowColor="#872D93"
-                android:saveEnabled="true"
-                android:showWeekNumber="true"
-                android:theme="@android:style/Widget.DeviceDefault.CalendarView"
-                android:verticalScrollbarPosition="right"
-                android:visibility="visible"
-                tools:visibility="visible" />
-
-            <EditText
-                android:id="@+id/etTelefono"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoText="false"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/texto_telefono"
-                android:inputType="phone" />
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/hint_correo"
-                android:inputType="textEmailAddress" />
-
-            <EditText
-                android:id="@+id/etDescripcionContacto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="start|top"
-                android:hint="@string/descripcion_contacto"
-                android:inputType="textMultiLine"
-                android:autofillHints="" />
-
             <EditText
                 android:id="@+id/etNombre"
                 android:layout_width="match_parent"
@@ -95,23 +42,110 @@
                 android:ems="10"
                 android:hint="@string/hint_nombre"
                 android:inputType="textPersonName"
-                android:scrollbarStyle="insideInset"
                 android:text="@string/texto_vacio"
                 android:visibility="visible"
                 tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/etFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text=""
+                android:autofillHints=""
+                android:onClick="launchFecha"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/parteFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/icons"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_fecha_nacimiento"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <DatePicker
+                    android:id="@+id/dpFechaNacimiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/cancelar"
+                        android:onClick="cancelarFecha"/>
+
+                    <Button
+                        android:id="@+id/btnAceptar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:onClick="establecerFecha"
+                        android:text="@string/aceptar" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hint_telefono"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_correo"
+                android:inputType="textEmailAddress"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/etDescripcionContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/hint_descripcion"
+                android:inputType="textMultiLine"
+                android:autofillHints=""
+                />
 
             <Button
                 android:id="@+id/buttonEnviar"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="30dp"
                 android:layout_marginTop="20dp"
-                android:background="@android:color/holo_blue_bright"
+                android:background="@color/colorAccent"
                 android:clickable="true"
-                android:onClick="showDatePickerDialog"
+                android:focusable="true"
+                android:onClick="enviarFor"
                 android:text="@string/boton_siguiente"
-                android:textAlignment="center"
                 android:visibility="visible"
                 tools:visibility="visible" />
 
