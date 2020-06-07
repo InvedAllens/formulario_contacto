@@ -1,0 +1,24 @@
+<resources>
+    <string name="texto_email">Email: </string>
+    <string name="boton_siguiente">Siguiente</string>
+    <string name="texto_editar">Editar Datos</string>
+    <string name="app_name">Test app #2</string>
+    <string name="texto_nombre">Nombre: </string>
+    <string name="texto_prueba">texto de prueba</string>
+    <string name="texto_descripcion">Descripcion: </string>
+    <string name="texto_vacio"></string>
+    <string name="hint_nombre">Nombre Completo</string>
+    <string name="datos_contacto">Datos del Contacto</string>
+    <string name="texto_telefono">Telefono: </string>
+    <string name="descripcion_contacto">Descripción Contacto</string>
+    <string name="confirmar_datos">Confirmar Datos</string>
+    <string name="hint_fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="hint_correo">Correo Electronico</string>
+    <string name="hint_descripcion">Descripcion Contacto</string>
+    <string name="hint_telefono">Telefono</string>
+    <string name="texto_fecha_nacimiento">Fecha de Nacimiento:</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Ok</string>
+
+
+</resources>

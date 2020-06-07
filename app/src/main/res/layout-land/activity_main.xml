@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideInset"
+        android:visibility="visible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvDatosContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/datos_contacto"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <CalendarView
+                android:id="@+id/cvCalendario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@android:color/holo_blue_bright"
+                android:dateTextAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:descendantFocusability="afterDescendants"
+                android:drawingCacheQuality="auto"
+                android:fadeScrollbars="true"
+                android:firstDayOfWeek="@android:integer/config_longAnimTime"
+                android:focusable="auto"
+                android:layoutMode="opticalBounds"
+                android:outlineAmbientShadowColor="#872D93"
+                android:saveEnabled="true"
+                android:showWeekNumber="true"
+                android:theme="@android:style/Widget.DeviceDefault.CalendarView"
+                android:verticalScrollbarPosition="right"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/texto_telefono"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hint_correo"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/etDescripcionContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/descripcion_contacto"
+                android:inputType="textMultiLine"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/hint_nombre"
+                android:inputType="textPersonName"
+                android:scrollbarStyle="insideInset"
+                android:text="@string/texto_vacio"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/buttonEnviar"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:onClick="showDatePickerDialog"
+                android:text="@string/boton_siguiente"
+                android:textAlignment="center"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
