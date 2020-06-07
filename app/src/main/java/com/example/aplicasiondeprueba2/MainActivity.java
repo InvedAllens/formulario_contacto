@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         componenteFecha.setVisibility(View.VISIBLE);
         etFechaDeNacimiento.setVisibility(View.GONE);
 
+
     }
     public void cancelarFecha(View view) {
         etFechaDeNacimiento.setVisibility(View.VISIBLE);
